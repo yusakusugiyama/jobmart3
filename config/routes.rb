@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :companies
   devise_for :users
-  resources :users, except: [:destroy]
+
+  resources :users
+  resources :companies
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
