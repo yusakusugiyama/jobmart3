@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160522090422) do
+ActiveRecord::Schema.define(version: 20160522113211) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "email",                  limit: 255,   default: "", null: false
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20160522090422) do
     t.text     "annual_income",          limit: 65535
     t.string   "location",               limit: 255
     t.string   "working_hours",          limit: 255
+    t.text     "url",                    limit: 65535
+    t.text     "image_url",              limit: 65535
   end
 
   add_index "companies", ["email"], name: "index_companies_on_email", unique: true, using: :btree
