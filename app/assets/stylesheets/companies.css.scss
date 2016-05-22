@@ -2,13 +2,21 @@
 
 .grid li {
     display: block;
-    background-color: #60cdb8;
     float: left;
     padding: 8px;
-    width: 33%;
+    width: 30%;
     color: #000;
     margin-bottom: 30px;
 }
+
+.inner_grid {
+  margin: 0;
+  display: block;
+  width: 100%;
+  background-color: #60cdb8;
+  box-sizing: border-box;
+}
+
 
 
 

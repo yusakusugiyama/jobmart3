@@ -24,9 +24,11 @@
 <%= yield %>
 
 <fotter>
-  <% unless user_signed_in? && company_signed_out? %>
-  test
-  <% end %>
+    <% if company_signed_in? %>
+      <%= link_to "採用担当者様用ログアウト", destroy_company_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "採用担当者様へ",new_company_registration_path, class: 'post' %>
+    <% end %>
 </fotter>
 </body>
 </html>

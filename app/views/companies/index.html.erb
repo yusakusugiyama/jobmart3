@@ -1,12 +1,14 @@
-<div class="row">
+<div class="row clearfix">
   <h1>コピー</h1>
 </div>
 <div class="row clearfix">
   <ul class="grid">
     <% @companies.each do |company| %>
-    <li class="box">
-      <%= company.name %>
-    </li>
+      <li class="box">
+        <figure class="inner_grid">
+        <%= company.name %>
+        </figure>
+      </li>
     <% end %>
   </ul>
 
