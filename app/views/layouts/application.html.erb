@@ -11,9 +11,22 @@
   <div class="container">
     JOB MART<br>
     WORKS SEARCH LOGIN SIGNUP
+    <% if user_signed_in? %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "サインイン",new_user_session_path, class: 'post' %>
+      <%= link_to "新規登録",new_user_registration_path, class: 'post' %>
+
+    <% end %>
+
   </div>
 </header>
 <%= yield %>
 
+<fotter>
+  <% unless user_signed_in? && company_signed_out? %>
+  test
+  <% end %>
+</fotter>
 </body>
 </html>
