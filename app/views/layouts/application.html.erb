@@ -10,9 +10,10 @@
 <header class="header">
   <div class="container">
     JOB MART<br>
-    WORKS SEARCH LOGIN SIGNUP
+    WORKS SEARCH<br>
     <% if user_signed_in? %>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <%= link_to "マイページ",user_path(current_user) %>
     <% else %>
       <%= link_to "サインイン",new_user_session_path, class: 'post' %>
       <%= link_to "新規登録",new_user_registration_path, class: 'post' %>
