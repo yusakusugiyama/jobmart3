@@ -33,18 +33,41 @@ time, mark, audio, video {
     border:0;
     outline:0;
     font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+    font-weight: normal;
+    vertical-align: baseline;
+    background: transparent;
 }
+
 
 /*レイアウト*/
 body {
   padding:0px;
+  background-color: #f2f2f2;
+  color: #27282e;
 }
+
+
+.big_subject {color: #000000;
+font-size: 2.0em;
+font-style: oblique;}
+
+.small_subject {font-size: 1.0em;}
 
 .row {
   padding:0 15px;
   margin: auto;}
+
+.square {
+  display:block;
+  float:right;
+  padding: 12px;
+  border: solid 1px #000000;
+}
+
+a.square:hover{
+  border: solid 1px #ffffff;
+  background-color:#ffffff;
+}
 
 /*クリアフィックス*/
 .clearfix:after  {
@@ -55,3 +78,5 @@ body {
   clear:both;
   visibility:hidden;
 }
+
+

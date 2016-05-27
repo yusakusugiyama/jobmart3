@@ -10,10 +10,11 @@
 }
 
 .inner_grid {
-  margin: 0;
+  margin: 0;padding: 12px;
+
   display: block;
   width: 100%;
-  background-color: #60cdb8;
+  border-bottom: solid 3px #60cdb8;
   box-sizing: border-box;
 }
 

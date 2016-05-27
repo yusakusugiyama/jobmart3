@@ -10,6 +10,9 @@ class CompaniesController < ApplicationController
     current_company.update(update_params)
   end
 
+  def show
+  end
+
   private
   def update_params
     params.require(:company).permit(:name)
