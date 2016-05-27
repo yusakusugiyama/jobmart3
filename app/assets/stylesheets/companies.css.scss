@@ -3,21 +3,28 @@
 .grid li {
     display: block;
     float: left;
-    padding: 7px;
+    padding: 7px 0.66%;
     width: 32%;
-    color: #000;
+    color: #333333;
     margin-bottom: 30px;
 }
 
 .inner_grid {
-  margin: 0;padding: 12px;
-
+  margin: 0;padding: 12px 0;
   display: block;
-  width: 100%;
-  border-bottom: solid 3px #60cdb8;
+  border-bottom: solid 3px #cccccc;
   box-sizing: border-box;
 }
 
+.box a:hover {color:#333333;}
+
+.box a img {
+  width: 100%;
+  box-sizing: border-box;
+  border: solid 12px #cccccc;
+  margin-bottom :12px;
+}
+.box a:hover img {opacity:0.7;}
 
 
 

@@ -32,7 +32,7 @@ time, mark, audio, video {
     padding:0;
     border:0;
     outline:0;
-    font-size:100%;
+    font-size:16px;
     font-weight: normal;
     vertical-align: baseline;
     background: transparent;
@@ -43,30 +43,72 @@ time, mark, audio, video {
 body {
   padding:0px;
   background-color: #f2f2f2;
-  color: #27282e;
+  color: #333333;
+  line-height: 1.5;
 }
 
+a {
+  color: #333333;
+  text-decoration: none;
+}
 
-.big_subject {color: #000000;
+a:hover {color: #f01616;}
+
+.big_subject {color: #333333;
 font-size: 2.0em;
-font-style: oblique;}
+font-style: oblique;
+margin: 12px 0;}
 
-.small_subject {font-size: 1.0em;}
+.small_subject {font-size: 0.8em;}
+
 
 .row {
-  padding:0 15px;
+  padding:15px 15px;
   margin: auto;}
 
-.square {
-  display:block;
+/*ボタン*/
+figure.square {
+  color: #27282e;
+  display:inline;
   float:right;
   padding: 12px;
-  border: solid 1px #000000;
+  border: solid 1px #333333;
 }
 
-a.square:hover{
-  border: solid 1px #ffffff;
+a:hover figure{
+  border: solid 1px #f01616;
   background-color:#ffffff;
+}
+
+/*ヘッダーエリア*/
+.header_menu_right {
+  float: right;
+  line-height: 18px;
+  margin-top :24px;
+  margin-left:8px;
+  font-weight :bold;
+  padding: 0px;
+  vertical-align: baseline;
+}
+
+.header_menu_left {
+  float: left;
+  line-height:32px;
+}
+
+header div.container {
+  padding:15px;
+  background-color: #ffffff;
+}
+
+.site_title {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  color: #f01616;
+  padding:4px;
+  border: solid 1px #f01616;
+
 }
 
 /*クリアフィックス*/

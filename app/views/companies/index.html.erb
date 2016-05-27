@@ -5,12 +5,13 @@
   <ul class="grid">
     <% @companies.each do |company| %>
       <li class="box">
-        <figure class="inner_grid clearfix">
+        <a href="/companies/<%= company.id %>" class="inner_grid clearfix">
+          <img src="<%= company.image_url %>" alt="<%= company.name %>画像">
           <h3 class="small_subject"><%= company.name %></h3>
           <h3 class="big_subject"><%= company.catch_copy %></h3>
-          <%= company.location %>
-          <%= link_to "詳細"," /companies/#{company.id}", class: :square %>
-        </figure>
+          <span class="info"><%= company.location %></span>
+          <figure class="square">詳細</figure>
+        </a>
       </li>
     <% end %>
   </ul>
