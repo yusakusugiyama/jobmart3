@@ -11,6 +11,8 @@ class CompaniesController < ApplicationController
   end
 
   def show
+    @company = Company.find(params[:id])
+    @u_to_c_like = UToCLike.new
   end
 
   private

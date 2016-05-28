@@ -1,0 +1,10 @@
+企業情報
+<%= @company.name %>
+<br /><br />
+
+クリエイト
+<%= form_for(@u_to_c_like) do |f| %>
+  <%=f.number_field :price, placeholder: "この企業に入社できる場合、教育コストをいくら自己負担できますか？" %>
+  <%= hidden_field_tag(:company_id, @company.id) %>
+  <%= f.submit "万円" %>
+<% end %>
