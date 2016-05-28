@@ -12,8 +12,8 @@
   <div class="container clearfix">
     <%= link_to "JOB MART",root_path, class: [:site_title, :header_menu_left] %>
     <% if user_signed_in? %>
-      <%= link_to "マイページ",user_path(current_user), class: :header_menu_right %>
       <%= link_to "ログアウト", destroy_user_session_path, class: 'header_menu_right', method: :delete %>
+      <%= link_to "マイページ",user_path(current_user), class: :header_menu_right %>
     <% else %>
       <%= link_to "新規登録",new_user_registration_path, class: 'header_menu_right' %>
       <%= link_to "サインイン",new_user_session_path, class: 'header_menu_right' %>
