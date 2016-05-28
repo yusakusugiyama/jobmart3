@@ -4,6 +4,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  #association
+  has_many :u_to_c_likes
+  has_many :company, through: :u_to_c_likes
+
   def name_method
     "#{last_name} #{first_name}"
   end
