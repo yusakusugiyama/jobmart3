@@ -39,6 +39,17 @@ time, mark, audio, video {
 }
 
 
+/*クリアフィックス*/
+.clearfix:after  {
+  content:".";
+  display:block;
+  height:0;
+  font-size:0;
+  clear:both;
+  visibility:hidden;
+}
+
+
 /*レイアウト*/
 body {
   padding:0px;
@@ -61,10 +72,31 @@ margin: 12px 0;}
 
 .small_subject {font-size: 0.8em;}
 
-
 .row {
   padding:15px 15px;
   margin: auto;}
+
+.inner_row        {padding:20px 0;}
+.inner_row.left   {text-align: left;}
+.inner_row.right  {text-align: right;}
+
+.width_2block {
+  width: 64.6%;
+}
+
+.left {float: left;}
+
+.right {float: right;}
+
+.blue_rocket {
+  display:inline-block;
+  color: #177abf;
+  border-bottom :solid 1px #177abf;
+  padding-bottom:2px;
+  margin-bottom :12px;
+  text-align: center;
+  font-weight: bold;
+}
 
 /*ボタン*/
 figure.square {
@@ -79,6 +111,7 @@ a:hover figure{
   border: solid 1px #f01616;
   background-color:#ffffff;
 }
+
 
 /*ヘッダーエリア*/
 .header_menu_right {
@@ -111,14 +144,4 @@ header div.container {
 
 }
 
-/*クリアフィックス*/
-.clearfix:after  {
-  content:".";
-  display:block;
-  height:0;
-  font-size:0;
-  clear:both;
-  visibility:hidden;
-}
-
-
+fotter .row{background-color: #ffffff;}
