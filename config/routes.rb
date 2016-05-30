@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :companies
-  resources :u_to_c_likes, only: [:new, :create]
+  resources :u_to_c_likes, only: [:create]
 
   root 'companies#index'
   # The priority is based upon order of creation: first created -> highest priority.
