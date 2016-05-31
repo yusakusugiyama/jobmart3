@@ -1,23 +1,63 @@
 <div class="row">
-<!-- 名前 -->
-<%= @user.name_method %><br />
-<%= @user.name_kana_method %>
-<br /><br />
-<!-- 生年月日 -->
-<%= @user.birth_y %>年
-<%= @user.birth_m %>月
-<%= @user.birth_d %>日
-<br /><br />
-<!-- 住所 -->
-<%= @user.address %>
-<br /><br />
-<!-- 電話番号未実装※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※-->
-<!-- 最終学歴 -->
-<%= @user.final_education %>
-<br /><br />
-<!-- 職務経歴 -->
-<%= @user.job_history %>
-<br /><br />
+
+  <div class="right clearfix">
+    <h1>
+    <span class="small_subject"><%= @user.name_kana_method %></span><br>
+      <span class="small_subject">名前</span> <span><%= @user.name_method %></span>
+      
+    </h1>
+  </div>
+
+  <hr class="dotted">
+    ライクした企業
+  <hr class="dotted">
+
+  <div class="inner_row left clearfix">
+    <h3 class="blue_rocket">生年月日</h3>
+      <p>
+        <%= @user.birthday_method %>
+      </p>
+  </div>
+
+  <hr class="dotted">
+
+  <div class="inner_row left clearfix">
+    <h3 class="blue_rocket">住所</h3>
+      <p>
+        <%= @user.address %>
+      </p>
+  </div>
+
+  <hr class="dotted">
+
+    <div class="inner_row left clearfix">
+    <h3 class="blue_rocket">住所</h3>
+      <p>
+        <%= @user.address %>
+      </p>
+  </div>
+
+  <hr class="dotted">
+
+  <div class="inner_row left clearfix">
+    <h3 class="blue_rocket">最終学歴</h3>
+      <p>
+        <%= @user.final_education %>
+      </p>
+  </div>
+
+  <hr class="dotted">
+
+  <div class="inner_row left clearfix">
+    <h3 class="blue_rocket">職務経歴</h3>
+      <p>
+        <%= @user.job_history %>
+      </p>
+  </div>
+
+  <hr class="dotted">
 
 
 </div>
+
+

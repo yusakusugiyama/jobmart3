@@ -15,4 +15,8 @@ class User < ActiveRecord::Base
   def name_kana_method
     "#{last_name_kana} #{first_name_kana}"
   end
+
+  def birthday_method
+    "#{birth_y}年 #{birth_m}月 #{birth_d}日"
+  end
 end
