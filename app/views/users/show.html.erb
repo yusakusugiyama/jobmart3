@@ -2,14 +2,40 @@
 
   <div class="right clearfix">
     <h1>
-    <span class="small_subject"><%= @user.name_kana_method %></span><br>
+      <span class="small_subject"><%= @user.name_kana_method %></span><br>
       <span class="small_subject">名前</span> <span><%= @user.name_method %></span>
-      
     </h1>
   </div>
 
   <hr class="dotted">
-    ライクした企業
+  <div class="inner_row left clearfix">
+    <h2 class="big_subject" style="color:#f01616;">LIKEした企業</h2>
+  </div>
+  <hr class="dotted">
+
+    <% @likes.each do |like| %>
+      <ul class="grid">
+        <li class="box">
+          <a href="/companies/<%= like.company.id %>" class="inner_grid clearfix">
+            <img src="<%= like.company.image_url %>" alt="<%= like.company.name %>画像">
+            <h3 class="small_subject">
+              <%= like.company.name %>
+            </h3>
+            <h3 class="big_subject">
+              <%= like.company.catch_copy %>
+            </h3>
+            <span class="small_subject">
+              <%= like.company.location %>
+            </span>
+            <p> 教育コストの自己負担学<%= like.price %>万円で応募しました。 </p>
+            <figure class="square">詳細</figure>
+          </a>
+        </li>
+      </ul>
+    <% end %>
+
+  <hr class="dotted">
+    プロフィール<br>
   <hr class="dotted">
 
   <div class="inner_row left clearfix">
