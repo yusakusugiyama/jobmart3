@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160528045116) do
+ActiveRecord::Schema.define(version: 20160608073246) do
+
+  create_table "c_to_u_likes", force: :cascade do |t|
+    t.integer  "company_id", limit: 4
+    t.integer  "user_id",    limit: 4
+    t.integer  "price",      limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string   "email",                  limit: 255,   default: "", null: false
