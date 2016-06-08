@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jobmart3</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<header class="header">
+  <div class="container clearfix">
+    <%= link_to "JOB MART",root_path, class: [:site_title, :header_menu_left] %>
+    <% if user_signed_in? %>
+      <%= link_to "ログアウト", destroy_company_session_path, method: :delete %>
+      <%= link_to "マイページ",user_path(current_user), class: :header_menu_right %>
+    <% else %>
+      <%= link_to "新規登録",new_company_registration_path, class: 'post' %>
+      <%= link_to "ログイン", new_company_session_path, class: 'post' %>
+
+    <% end %>
+
+  </div>
+</header>
+<%= yield %>
+
+<fotter>
+  <div class="row">
+    <a href="/companies">求職者の方はこちら</a>
+  </div>
+</fotter>
+</body>
+</html>
