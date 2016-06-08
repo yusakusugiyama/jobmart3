@@ -9,7 +9,7 @@
 
   <hr class="dotted">
   <div class="inner_row left clearfix">
-    <h2 class="big_subject" style="color:#f01616;">LIKEした企業</h2>
+    <h2 class="big_subject" style="color:#d75452;">LIKEした企業</h2>
   </div>
   <hr class="dotted">
 
@@ -27,7 +27,7 @@
             <span class="small_subject">
               <%= like.company.location %>
             </span>
-            <p> 教育コストの自己負担学<%= like.price %>万円で応募しました。 </p>
+            <p> 教育コストの自己負担学<br /><span class="big_subject"><%= like.price %>万円</span>で応募済 </p>
             <figure class="square">詳細</figure>
           </a>
         </li>
@@ -40,7 +40,7 @@
 
   <div class="inner_row left clearfix">
     <h3 class="blue_rocket">生年月日</h3>
-      <p>
+      <p class="blue_">
         <%= @user.birthday_method %>
       </p>
   </div>
