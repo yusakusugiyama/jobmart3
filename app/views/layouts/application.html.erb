@@ -26,11 +26,7 @@
 
 <fotter>
   <div class="row">
-    <% if company_signed_in? %>
-      <%= link_to "採用担当者様用ログアウト", destroy_company_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "採用担当者様へ",new_company_registration_path, class: 'post' %>
-    <% end %>
+    <a href="/users">採用ご担当者様へ</a>
   </div>
 </fotter>
 </body>

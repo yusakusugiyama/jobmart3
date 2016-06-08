@@ -1,0 +1,2 @@
+module CToULikesHelper
+end

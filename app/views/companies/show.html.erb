@@ -54,7 +54,7 @@
   </div>
   
   <hr class="dotted">
-
+  
   <div class="inner_row right clearfix">
     <h3 class="blue_rocket">住所</h3>
     <p><%= @company.location %></p>
@@ -68,11 +68,16 @@
   </div>
   
   <hr class="dotted">
-
-  <%= form_for(@u_to_c_like) do |f| %>
-    <%=f.number_field :price, placeholder: "教育コストをいくら自己負担できますか？" %>
-    <%= f.hidden_field :company_id, :value => @company.id %>
-    <%= f.submit "万円" %>
+  
+  <% if user_signed_in? %>
+    <%= form_for(@u_to_c_like) do |f| %>
+      <%=f.number_field :price, placeholder: "教育コストをいくら自己負担できますか？" %>
+      <%= f.hidden_field :company_id, :value => @company.id %>
+      <%= f.submit "万円" %>
+    <% elsif %>
+      <a href="/users/sign_in">ログイン</a>して企業に応募
+      <a href="/users/sign_up">新規会員登録</a>
+    <% end %>
   <% end %>
 
 </div>

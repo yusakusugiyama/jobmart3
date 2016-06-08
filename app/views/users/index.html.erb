@@ -1,0 +1,15 @@
+<div class="row clearfix">
+  <ul class="grid">
+    <% @users.each do |user| %>
+      <li class="box">
+        <a href="/users/<%= user.id %>" class="inner_grid clearfix">
+          <img src="" alt="">
+          <h3 class="small_subject"><%= user.name_method %></h3>
+          <h3 class="big_subject"><%= user.birthday_method %></h3>
+          <span class="small_subject"><%= user.job_history %></span>
+          <figure class="square">詳細</figure>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>
